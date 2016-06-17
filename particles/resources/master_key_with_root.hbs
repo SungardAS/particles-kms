@@ -1,0 +1,20 @@
+---
+accountId: {"Ref": "AWS::AccountId"}
+---
+"Type": "AWS::KMS::Key",
+"Properties": {
+  "KeyPolicy": {
+    "Statement": [
+      {
+        "Sid": "Admin",
+        "Effect": "Allow",
+        "Principal": {"AWS": {"Fn::Join": [":", ["arn","aws","iam","",{{helper "m:core" "propertyValue" accountId}},"root"] ]  } },
+        "Action": [
+          "kms:*"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }
+}
+
