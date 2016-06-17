@@ -1,0 +1,12 @@
+---
+accountId: {"Ref": "AWS::AccountId"}
+---
+{
+  "Sid": "Admin",
+  "Effect": "Allow",
+  "Principal": {"AWS": {"Fn::Join": [":", ["arn","aws","iam","",{{helper "m:core" "propertyValue" accountId}},"root"] ]  } },
+  "Action": [
+    "kms:*"
+  ],
+  "Resource": "*"
+}
