@@ -1,0 +1,8 @@
+{{#resource "m:core" "base" type="AWS::KMS::Key"}}
+"Properties" : {
+  "KeyPolicy": {{helper "m:core" "propertyValue" keyPolicy}}
+  {{#if description}},"Description": {{helper "m:core" "propertyValue" description}}{{/if}}
+  {{#if enabled}},"Enabled": {{helper "m:core" "propertyValue" enabled}}{{/if}}
+  {{#if enableKeyRotation}},"EnableKeyRotation": {{helper "m:core" "propertyValue" enableKeyRotation}}{{/if}}
+}
+{{/resource}}

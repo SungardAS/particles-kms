@@ -1,0 +1,19 @@
+{
+  "MasterKey": {
+    "Type": "AWS::KMS::Key",
+    "Properties": {
+      "KeyPolicy": {
+        "Statement": [{
+          "Action": ["kms:*"],
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": {"Fn::Join": [ ":", [ "arn", "aws", "iam", "", { "Ref": "AWS::AccountId" }, "root" ]]}
+          },
+          "Resource": "*",
+          "Sid": "Admin"
+        }]
+      }
+    }
+  }
+}
+
