@@ -1,7 +1,8 @@
 language: node_js
 node_js:
-- '0.11'
-- '0.10'
+- '4'
+- '5'
+- '6'
 deploy:
   provider: npm
   email: as.us.labs@sungardas.com
@@ -10,6 +11,7 @@ deploy:
   on:
     tags: true
     repo: SungardAS/particles-kms
+    node: 6
 env:
   global:
   - secure: GaLPcvrCOxZ734IGSa3QFIp/S68EQ6c5CG98cWlACDPEy6/8c75Zyw0D9YGst0Q2f+4vN06QpAiIKrNzSY7yJwZyMfkNZCegrSPztRF84PuMcN9x2n23Tz5K0X7DoppftA1JAzo0qaRyzgWFEpTMctGY+1YRUhIgpQtgO2jJdREAlKlhWsBLrw2ABrpZFTTT2ziUR7chVC14Sb6TE6PF+iXUF2Nw2qpT+OLJ50BiopH24Yq5PtnTD0ZB8xWH7F5viBsthITf+0xK94LBMruveiwsIp8WDVrgEMRQpMUrpMQ05f+LSe5PA0WnZfycEXRjtnye+8c1xkLCct55ewEQos8I1iBKaxPMbYROVlxmXqBKBYVGMpcE1T0AKj1WoSQha1TisI7wBd9W8zEQxZNbf28O5rLffzsE60RmHSJgkcbvG9rR6TIv50rGvq2UcNeP9HGmi8qPDyQW694lFCuyEiBaMyhPmKesMEGVNDZ6yrVE/9Och9J4OT3f2/O4XAfgSW4yN7of7LgB1GMpD09M+Xs0EbUvA/TfmU93RdPq7IPdYgHrQtrOG5sreBYTm6O5nE19dv6zg9NBhmFLpAoZeFK127mOhRbOJHrqg2qZg20SB9x2NuY3rpUKW0vKuRq0bXeUrGEF+kVuOVlPd68mffwusrB8j6BtV21m64WPNAw=
