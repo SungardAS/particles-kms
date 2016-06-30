@@ -1,0 +1,6 @@
+---
+description: The Base64 encoded encrypted plaintext
+---
+{{#output "m:core" "base"}}
+  "Value": { "Fn::GetAtt" : [ "{{lfEncryptLogicalId}}", "CiphertextBlob" ] }
+{{/output}}

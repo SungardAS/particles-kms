@@ -2,3 +2,4 @@ condensation_errors
 config/local.js
 dist
 node_modules
+vendor

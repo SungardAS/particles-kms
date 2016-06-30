@@ -1,0 +1,12 @@
+{
+  "Sid": "basicKeyUse",
+  "Effect": "Allow",
+  "Action": [
+    "kms:DescribeKey",
+    "kms:GenerateDataKey*",
+    "kms:Encrypt",
+    "kms:ReEncrypt*",
+    "kms:Decrypt"
+  ],
+  "Resource": {{helper "m:core" "propertyValue" resourceArn}}
+}

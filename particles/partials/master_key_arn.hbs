@@ -1,0 +1,5 @@
+{
+  "Fn::Join": [":",
+    ["arn","aws","kms",{"Ref": "AWS::Region"},{"Ref": "AWS::AccountId"},{"Fn::Join": ["/", ["key",{{ref masterKeyLogicalId}}]]}]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "lf-kms",
+  "version": "0.1.0-beta.0",
+  "publishConfig": {
+    "tag": "beta"
+  },
+  "description": "Lambda Formation project",
+  "license": "Apache-2.0",
+  "keywords": [
+    "lamba-formation",
+    "kms"
+  ],
+  "scripts": {
+    "dist": "zip -FSr dist/lambda.zip * -x \"*.git*\" \"dist/*\"",
+    "s3upload": ""
+  },
+  "dependencies": {
+    "aws-sdk": "^2.3.8",
+    "cfn-responder": "^0.1.0",
+    "lambda-formation": "^0.1.1"
+  }
+}

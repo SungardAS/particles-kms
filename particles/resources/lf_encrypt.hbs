@@ -1,0 +1,9 @@
+{{#resource "m:core" "base" type="Custom::encrypt"}}
+  "Properties": {
+    "ServiceToken": {{helper "m:core" "propertyValue" serviceToken}},
+    "KeyId": {{helper "m:core" "propertyValue" keyId}},
+    "Plaintext": {{helper "m:core" "propertyValue" plaintext}}
+    {{#if encryptionContext}},"EncryptionContext": {{helper "m:core" "propertyValue" encryptionContext}}{{/if}}
+    {{#if grantTokens}},"GrantTokens": {{helper "m:core" "propertyValue" grantTokens}}{{/if}}
+  }
+{{/resource}}

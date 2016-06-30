@@ -1,0 +1,20 @@
+---
+logicalIdPrefix: Kms
+---
+{{
+  resource "m:lambda" "function/execution_role"
+  logicalId="ExecutionRole"
+  policyStatement=(
+    partial "lf_kms_statement"
+    resourceArn=masterKeyArn
+  )
+}}
+
+{{
+  resource "lf_kms_function"
+  logicalId="Lambda"
+  role=(partial "m:core" "fn_get_att" logicalId=(scopeId "ExecutionRole") attributeName="Arn")
+}}
+
+{{set "m:lambda" "function/all_outputs" functionLogicalId=(scopeId "Lambda")}}
+{{set "m:lambda" "execution_role/all_outputs" roleLogicalId=(scopeId "ExecutionRole")}}
