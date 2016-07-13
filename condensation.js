@@ -20,7 +20,7 @@ module.exports.initialize = function(cb) {
         if (error) return cb(error);
         vfs.src(path.join(__dirname,"vendor","lf-kms","package","**"))
         .pipe(zip("lf-kms.zip"))
-        .pipe(gulp.dest("./particles/assets"))
+        .pipe(gulp.dest(path.join(__dirname,"particles","assets")))
         .on("end", cb);
       });
     });
